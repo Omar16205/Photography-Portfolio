@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gallery · Omar’s Lens</title>
+<meta name="description" content="A living personal photo archive organized by trips, places, themes, and small collections." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='80'%3E%E2%9B%B0%EF%B8%8F%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">
+      Omar’s Lens<span class="dot">.</span>
+      <small>a journal</small>
+    </a>
+
+    <nav class="nav-main" aria-label="Primary">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="index.html#about" data-page="about">About</a>
+      <a href="gallery.html" data-page="gallery">Gallery</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <!-- moon shown in light mode -->
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+        </svg>
+
+        <!-- sun shown in dark mode -->
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+
+      <button class="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== PAGE HERO ============== -->
+<section class="page-hero gallery-hero">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">The archive. trips, adventures, and loose frames.</div>
+      <h1 class="display">Framing every memory one picture at a time.</h1>
+      <p class="lede">
+        A visual archive of my adventures, from the Kurdish mountains to distant cities, flowers,
+        quiet streets, portraits, and the small details that often go unnoticed. Arranged as
+        collections to tell stories that matter.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section class="archive-section">
+  <div class="wrap">
+    <div class="archive-toolbar reveal">
+      <div>
+        <h2 class="display">Choose a collection.</h2>
+      </div>
+    </div>
+
+    <div class="gallery-filters reveal" role="tablist" id="collectionFilters">
+      <button class="active" data-filter="all">All <span class="count">· 0</span></button>
+    </div>
+
+    <div id="collectionShelf" class="collection-shelf reveal"></div>
+
+    <div id="collectionsWrap" class="collections-wrap">
+      <div class="gallery-loading">Loading your photographs…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="footer-stamp">
+    Posted from<br/>
+    <span>the mountains</span>
+  </div>
+
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          Omar’s Lens<span class="dot">.</span>
+        </a>
+
+        <p>
+          My personal traveling journal of pictures from Kurdistan to the world and wherever the next adventure leads.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Wander</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/advntr_dumps/" aria-label="Instagram: advntr_dumps">
+              <span class="footer-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1"></circle>
+                </svg>
+              </span>
+              @advntr_dumps
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:omarkh2@hotmail.com" aria-label="Email Omar">
+              <span class="footer-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="M3 7l9 6 9-6"></path>
+                </svg>
+              </span>
+              omarkh2@hotmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="made">made with <span class="heart">♥</span> from the road</span>
+      <span>© <span id="year"></span> · all rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== LIGHTBOX ============== -->
+<div class="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" aria-label="Close">✕</button>
+    <img src="" alt="" />
+    <div class="caption">
+      <span class="title"></span>
+      <span class="meta"></span>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
