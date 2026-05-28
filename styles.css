@@ -2115,3 +2115,322 @@ section { padding: 100px 0; position: relative; }
   .collections-wrap { gap: 72px; }
   .collection-divider { padding-top: 70px; }
 }
+/* ============================================
+   MOBILE GALLERY FIX — paste kept at the bottom
+   Makes gallery fully usable on phones
+   ============================================ */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .page-hero,
+  .gallery-hero {
+    padding: 124px 0 46px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.7rem, 15vw, 4.4rem);
+    line-height: 0.96;
+    max-width: 9ch;
+    margin-bottom: 18px;
+  }
+
+  .page-hero .lede,
+  .gallery-hero .lede {
+    font-size: 1rem;
+    line-height: 1.55;
+    max-width: 34ch;
+  }
+
+  .archive-section {
+    padding-top: 8px;
+  }
+
+  .archive-toolbar {
+    display: block;
+    margin-bottom: 26px;
+  }
+
+  .archive-toolbar h2 {
+    font-size: clamp(2rem, 12vw, 3.4rem);
+    line-height: 0.98;
+  }
+
+  .archive-toolbar p {
+    font-size: 0.98rem;
+    max-width: 34ch;
+  }
+
+  .collection-shelf-shell {
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 18px;
+    overflow: hidden;
+  }
+
+  .collection-shelf {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(235px, 82vw);
+    gap: 14px;
+    overflow-x: auto;
+    padding: 4px 18px 18px 0;
+    margin-bottom: 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .shelf-card {
+    height: 190px;
+    border-radius: 22px;
+    scroll-snap-align: start;
+  }
+
+  .shelf-nav,
+  .shelf-fade-left,
+  .shelf-fade-right {
+    display: none !important;
+  }
+
+  .collections-wrap {
+    gap: 62px;
+  }
+
+  .collection-block {
+    overflow: visible;
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
+  }
+
+  .collection-divider {
+    padding-top: 54px;
+  }
+
+  .collection-intro,
+  .collection-intro.intro-minimal {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .collection-copy h2 {
+    font-size: clamp(2.15rem, 13vw, 3.7rem);
+    line-height: 0.96;
+    margin: 12px 0 16px;
+    max-width: 9ch;
+  }
+
+  .collection-copy p {
+    font-size: 0.98rem;
+    line-height: 1.58;
+    max-width: 34ch;
+  }
+
+  .collection-lead,
+  .collection-lead.portrait,
+  .collection-lead.landscape {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    max-width: 100%;
+    margin-top: 26px;
+    border-radius: 24px;
+    transform: none !important;
+  }
+
+  .collection-lead img {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .collection-lead.landscape img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .archive-grid,
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0;
+    contain: none;
+  }
+
+  .archive-photo,
+  .archive-photo.landscape,
+  .archive-photo.portrait,
+  .archive-photo.square,
+  .archive-photo.span-wide,
+  .archive-grid .postcard,
+  .archive-grid .postcard.span-wide,
+  .gallery-grid .postcard,
+  .gallery-grid .postcard.span-6 {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .archive-photo {
+    border-radius: 18px;
+    box-shadow: var(--shadow-sm);
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
+  }
+
+  .archive-photo img,
+  .archive-photo.portrait img,
+  .archive-photo.landscape img,
+  .archive-photo.square img {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .archive-photo.portrait img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .archive-photo.landscape img,
+  .archive-photo.span-wide img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .archive-photo.square img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .archive-caption {
+    opacity: 1;
+    transform: none;
+    padding: 46px 14px 14px;
+    gap: 8px;
+  }
+
+  .postcard {
+    padding: 12px 12px 42px;
+    transform: none !important;
+    max-width: 100%;
+  }
+
+  .postcard-caption {
+    display: block;
+    padding: 14px 4px 0;
+  }
+
+  .postcard-caption .title {
+    font-size: 1.35rem;
+  }
+
+  .postcard-caption .meta {
+    display: block;
+    margin-top: 6px;
+    text-align: left;
+    font-size: 0.62rem;
+  }
+
+  .gallery-filters {
+    gap: 7px;
+    margin-bottom: 34px;
+    padding-bottom: 16px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-filters button {
+    flex: 0 0 auto;
+    padding: 9px 14px;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  .postcard-img img,
+  .postcard:hover .postcard-img img,
+  .archive-photo img,
+  .archive-photo:hover img,
+  .collection-lead img,
+  .collection-lead:hover img,
+  .shelf-card img,
+  .shelf-card:hover img {
+    transform: none !important;
+    transition: filter 0.2s ease !important;
+  }
+
+  .archive-photo:hover,
+  .collection-lead:hover,
+  .postcard:hover {
+    transform: none !important;
+  }
+
+  .lightbox {
+    padding: 68px 10px 14px;
+  }
+
+  .lightbox-inner {
+    width: 100%;
+    max-height: calc(100dvh - 82px);
+    padding: 10px 10px 16px;
+  }
+
+  .lightbox img {
+    width: 100%;
+    max-height: calc(100dvh - 190px);
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 390px) {
+  .wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.35rem, 14vw, 3.7rem);
+  }
+
+  .collection-shelf {
+    grid-auto-columns: minmax(220px, 84vw);
+  }
+
+  .shelf-card {
+    height: 178px;
+  }
+
+  .archive-grid,
+  .gallery-grid {
+    gap: 16px;
+  }
+}
